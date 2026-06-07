@@ -1,23 +1,56 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 10px;
+            height: 100vh;
+        }
 
-<html>
-  <head>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+        .header {
+            grid-column: 1 / 3;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
 
-  <body>
-    <body id="grid">
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-    </body>
-    <script type="text/javascript" src="./script.js"></script>
-  </body>
+        .sidebar {
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .main {
+            background-color: #e9e9e9;
+            padding: 20px;
+        }
+
+        .footer {
+            grid-column: 1 / 3;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">Header</header>
+
+        <aside class="sidebar">Sidebar</aside>
+
+        <main class="main">
+            Main Content
+        </main>
+
+        <footer class="footer">Footer</footer>
+    </div>
+</body>
 </html>
